@@ -1,0 +1,25 @@
+/**
+* @name Home Button
+* @author Shaw
+* @version vovv
+* @description ._.
+*/
+
+/*
+Rika -- https://i.imgur.com/K3EN7oL.png
+DeDeDede -- https://cdn.animenewsnetwork.com/thumbnails/max300x600/cms/news/76245/dedede2.jpg
+Shinobu -- https://cdn.discordapp.com/attachments/827899385320570891/944853583860486194/Screenshot_20220220-140746876_1_1.jpg
+Elaina -- https://media.discordapp.net/attachments/827899385320570891/1122574203439284276/97e86c0816792956c44c6f13767ba7b9.jpg
+*/
+
+.tutorialContainer-1pL9QS .childWrapper-1j_1ub {
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('https://media.discordapp.net/attachments/827899385320570891/1122574203439284276/97e86c0816792956c44c6f13767ba7b9.jpg');
+    background-size: cover;
+    background-clip: border-box;
+}
+.childWrapper-1j_1ub .homeIcon-r0w4ny {
+    display: none
+}

@@ -1,0 +1,76 @@
+/**
+* @name ShawOS
+* @author Shaw
+* @version vhen the imposter is sus!
+* @description /ᐠ｡ꞈ｡ᐟ\
+*/
+
+/*Font*/
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+html, body {
+  font-family: 'Share Tech Mono', monospace;
+}
+
+/*Background Image*/
+.bg-1QIAus {
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('https://cdn.discordapp.com/attachments/899604512506003478/900749137904025710/thumb-1920-1162944.png');
+    /*WEP - https://cdn.discordapp.com/attachments/899604512506003478/900749137904025710/thumb-1920-1162944.png*/
+    /*MONO - https://cdn.discordapp.com/attachments/827899385320570891/1007576100928487494/unknown.png*/
+    /*ALICE - https://media.discordapp.net/attachments/827899385320570891/1009823627627204679/dddd.png?width=1178&height=662*/
+    /*SPACE - https://wallpapercave.com/wp/wp3493593.jpg*/
+    opacity: 0.1;
+    filter: blur(2px);
+}
+
+/*Transparent Elements*/
+.app-2CXKsg,
+.chat-2ZfjoI,
+.container-1eFtFS,
+.container-ZMc96U.themed-Hp1KC_,
+.container-1NXEtd,
+.container-1-ERn5,
+.container-2o3qEW,
+.content-1SgpWY,
+.contentRegion-3nDuYy,
+.contentRegionScroller-26nc1e,
+.header-3OsQeK,
+.inviteToolbar-3F-l2g,
+.layer-86YKbF,
+.members-3WRCEx,
+.members-3WRCEx>div,
+.sidebar-1tnWFu,
+.scroller-3X7KbA,
+.scrollerContent-2SW0kQ, 
+.sidebar-1tnWFu,
+.privateChannels-oVe7HL,
+.content-1SgpWY,
+.container-1oeRFJ,
+.container-2cd8Mz,
+.panels-3wFtMD,
+.scroller-WSmht3,
+.nowPlayingColumn-1eCBCN,
+.container-1oAagU,
+.contentRegionScroller-2_GT_N,
+.contentRegionShownSidebar-fHXkEg,
+.scrollerBase-_bVAAt,
+.contentRegion-3HkfJJ,
+.standardSidebarView-E9Pc3j,
+.pageWrapper-2PwDoS,
+.premiumContainer-3GGa8Q,
+.applicationStore-2nk7Lo,
+.wrapper-3HVHpV,
+.wrapper-15CKyy,
+.wrapper-1_HaEi,
+.form-3gdLxP:before,
+.container-1zzFcN,
+.container-YkUktl,
+.chatContent-3KubbW,
+.children-3xh0VB:after
+
+{
+    background: transparent !important
+}
