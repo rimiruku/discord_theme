@@ -1,5 +1,5 @@
-/*@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/SettingsIcons.css);
-@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/BlurpleRecolor/BlurpleRecolor.css);*/
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/SettingsIcons.css);
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/BlurpleRecolor/BlurpleRecolor.css);
 
 :root {
 	--transparencycolor:			0,0,0;
@@ -12,6 +12,11 @@
 	
 	--font:							"gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	--textshadow:					transparent;
+	
+	--accentcolor:					190,78,180;
+	--accentcolor2:					var(--accentcolor);
+	--mentioncolor:					var(--accentcolor);
+	--linkcolor:					var(--accentcolor);
 	
 	--successcolor: 				59,165,92;
 	--warningcolor: 				250,166,26;
@@ -1075,15 +1080,18 @@ button.button__4f306.enabled__470f0:hover svg {
 	background-image: linear-gradient(rgba(var(--accentcolor), calc(0.2 * (1 - var(--usechatbubbles)))), rgba(var(--accentcolor), calc(0.2 * (1 - var(--usechatbubbles)))));
 }
 .message__80c10.mentioned__58017 {							/* message				mentioned							*/
-	background-image: calc(0.2 * (1 - var(--usechatbubbles)))), rgba(var(--accentcolor), calc(0.2 * (1 - var(--usechatbubbles)))));
+	background-image: linear-gradient(rgba(var(--mentioncolor), calc(0.2 * (1 - var(--usechatbubbles)))), rgba(var(--accentcolor), calc(0.2 * (1 - var(--usechatbubbles)))));
 }
 .message__80c10.ephemeral_c26b64::before,
 .message__80c10.replying_d7b6ad::before {
 	background-color: rgb(var(--accentcolor));
 }
+.message__80c10.mentioned__58017::before {
+	background-color: rgb(var(--mentioncolor));
+}
 .message__80c10.mentioned__58017 .contents_f41bb2 .messageContent__21e69 {
 	border-radius: 3px;
-	background-color: calc(0.3 * var(--usechatbubbles)));
+	background-color: rgba(var(--mentioncolor), calc(0.3 * var(--usechatbubbles)));
 }
 #app-mount .avatar__08316,									/* message				container avatar					*/
 #app-mount .avatar_eb6eba {									/* message				loading avatar						*/
@@ -1286,11 +1294,11 @@ button.button__4f306.enabled__470f0:hover svg {
 	border-right-color: rgba(var(--transparencycolor), calc(var(--messagetransparency) * 1.2));
 }
 #app-mount .mentioned__58017.cozy_f5c119 .header__39b23::after {
-	border-right-color: calc(var(--messagetransparency) * 100000000000000000000000000000));
+	border-right-color: rgba(var(--mentioncolor), calc(var(--messagetransparency) * 100000000000000000000000000000));
 }
 #app-mount .ephemeral_c26b64.cozy_f5c119 .header__39b23::after,
 #app-mount .replying_d7b6ad.cozy_f5c119 .header__39b23::after {
-	border-right-color: calc(var(--messagetransparency) * 100000000000000000000000000000));
+	border-right-color: rgba(var(--accentcolor), calc(var(--messagetransparency) * 100000000000000000000000000000));
 }
 .message_f3a9e4,
 .message__41c2a,
@@ -1354,6 +1362,9 @@ button.button__4f306.enabled__470f0:hover svg {
 	opacity: 1 !important;
 }
 .attachment__7a2d0,											/* message				loading attachment					*/
+.blob__8d5bd {												/* message				loading blob						*/
+	background: rgb(var(--accentcolor));
+}
 
 .expanded_be53d7 {											/* message				expanded blocked					*/
 	background-color: rgba(var(--transparencycolor), .2);
@@ -1367,6 +1378,12 @@ button.button__4f306.enabled__470f0:hover svg {
 }
 .reaction_fef95b:hover {
 	background-color: rgba(var(--transparencycolor), .4);
+}
+.reaction_fef95b.reactionMe__98f57 {
+	background-color: rgba(var(--accentcolor), .8);
+}
+.reaction_fef95b.reactionMe__98f57:hover {
+	background-color: rgb(var(--accentcolor));
 }
 .reaction_fef95b.reactionMe__98f57 .reactionCount_b49901 {
 	color: #FFF;
@@ -1483,9 +1500,11 @@ button.button__4f306.enabled__470f0:hover svg {
 }
 .icon__8c32c[style*="/assets/b8029fe196b8f1382e90bbe81dab50dc.svg"] {		/* systemmessage			joincallicon							*/
 	-webkit-mask: url(https://discord.com/assets/b8029fe196b8f1382e90bbe81dab50dc.svg) center/cover no-repeat;
+	background: rgb(var(--accentcolor)) !important;
 }
 .icon__8c32c[style*="/assets/c30220457097b064286a8759a9b6c4af.svg"] {		/* systemmessage			recievecallicon							*/
 	-webkit-mask: url(https://discord.com/assets/c30220457097b064286a8759a9b6c4af.svg) center/cover no-repeat;
+	background: rgb(var(--accentcolor)) !important;
 }
 
 /* ====		6.2.2.	EMBEDS							==== */
@@ -1618,6 +1637,12 @@ button.button__4f306.enabled__470f0:hover svg {
 	color: var(--text-normal);
 }
 
+.toolbar_c7b525 {											/* textarea				formattoolbar						*/
+	background-color: rgb(var(--accentcolor));
+}
+.toolbar_c7b525::before {
+	border-top-color: rgb(var(--accentcolor));
+}
 .divider__441cb {											/* textarea				formattoolbar divider				*/
 	border-left-color: hsla(0, 0%,100%, .1);
 }
@@ -1668,6 +1693,9 @@ button.button__4f306.enabled__470f0:hover svg {
 	background-color: rgba(var(--transparencycolor), calc(var(--transparencyalpha) + 0.25));
 	backdrop-filter: blur(var(--popoutblur));
 }
+.theme-brand .autocomplete_df266d {
+	background: rgb(var(--accentcolor)) linear-gradient(rgba(var(--transparencycolor), .2), rgba(var(--transparencycolor), .2)) !important;
+}
 .theme-brand .autocomplete_df266d::before,
 .theme-brand .autocomplete_df266d::after {
 	display: none;
@@ -1692,6 +1720,9 @@ button.button__4f306.enabled__470f0:hover svg {
 	background-color: transparent;
 }
 #app-mount .selected__608f1,								/* autocomplete			category selected					*/
+#app-mount .selected__608f1:hover {
+	background-color: rgb(var(--accentcolor));
+}
 #app-mount .selected__608f1 svg {
 	filter: drop-shadow(1px 1px var(--textshadow));
 }
@@ -1729,6 +1760,7 @@ button.button__4f306.enabled__470f0:hover svg {
 	border-radius: 0 0 0 8px;
 }
 #app-mount .tab-2j5AEF.selected-2LAck8 {					/* searchpage			selected tab						*/
+	background-color: rgb(var(--accentcolor));
 	text-shadow: 1px 1px var(--textshadow);
 }
 .channelName-3w2Y3c {										/* searchpage			channelname							*/
@@ -1741,6 +1773,7 @@ button.button__4f306.enabled__470f0:hover svg {
 	background-color: rgba(var(--transparencycolor), .4);
 }
 .button_f8244b:hover {
+	background-color: rgb(var(--accentcolor));
 	text-shadow: 1px 1px var(--textshadow);
 }
 .pageButton-1GMGeJ:hover {
@@ -1866,6 +1899,10 @@ button.button__4f306.enabled__470f0:hover svg {
 .colorable_c84c4c.primaryDark__6b700 {
 	background-color: rgba(var(--transparencycolor), .5);
 }
+.centerButton__3205b:hover,
+.colorable_c84c4c.primaryDark__6b700:hover {
+	background-color: rgb(var(--accentcolor));
+}
 .button__13ec4 {
 	background-color: rgba(var(--transparencycolor), .4);
 }
@@ -1899,6 +1936,9 @@ button.button__4f306.enabled__470f0:hover svg {
 }
 .participants__5d231 {										/* call					podium participants				*/
 	background-color: transparent;
+}
+.tileContainer__88d69:hover {								/* call					podium participant				*/
+	background-color: rgb(var(--accentcolor));
 }
 .container__7b94f {											/* call					podium requests					*/
 	background-color: rgba(var(--transparencycolor), calc(var(--guildchanneltransparency) * 0.3));
@@ -1937,6 +1977,10 @@ button.button__4f306.enabled__470f0:hover svg {
 .peopleListItem_d14722 .actionButton__23182,				/* peoples				actionbutton						*/
 .peopleListItem_d14722 .actionButton-3-B2x {				/* peoples				actionbutton						*/
 	background-color: rgba(var(--transparencycolor), .1);
+}
+.peopleListItem_d14722 .actionButton__23182:hover,
+.peopleListItem_d14722 .actionButton-3-B2x:hover {
+	background-color: rgb(var(--accentcolor));
 }
 .peopleListItem_d14722 .actionButton__23182:hover svg,
 .peopleListItem_d14722 .actionButton-3-B2x:hover svg {
@@ -2385,6 +2429,7 @@ button.button__4f306.enabled__470f0:hover svg {
 #app-mount .topPill__0cdf1 .themed_b957e8.selected__5711d.item__48dda:active,
 #app-mount .side_b4b3f6 .themed_b957e8.selected__5711d.item__48dda:hover,
 #app-mount .topPill__0cdf1 .themed_b957e8.selected__5711d.item__48dda:hover {
+	background-color: rgb(var(--accentcolor));
 	color: #fff;
 	text-shadow: 1px 1px var(--textshadow);
 }
@@ -2432,6 +2477,7 @@ button.button__4f306.enabled__470f0:hover svg {
 	fill: var(--channels-default);
 }
 #app-mount .closeButton__34341:hover {
+	background-color: rgba(var(--accentcolor), .2);
 	border-color: var(--header-secondary);
 }
 #app-mount .closeButton__34341:hover path[fill] {
@@ -2454,6 +2500,7 @@ button.button__4f306.enabled__470f0:hover svg {
 	fill: var(--header-secondary);
 }
 #app-mount .closeButtonBold__30e2a:hover {
+	background-color: rgba(var(--accentcolor), .4);
 	border-color: var(--text-normal);
 }
 #app-mount .closeButtonBold__30e2a:hover path[fill] {
@@ -2570,6 +2617,9 @@ button.button__4f306.enabled__470f0:hover svg {
 }
 .accountBtn-1YkMgV .accountBtnInner-3XK70s {				/* connections			connectioninner						*/
 	background-color: rgba(var(--transparencycolor), .2);
+}
+.accountBtn-1YkMgV .accountBtnInner-3XK70s:hover {
+	background-color: rgb(var(--accentcolor));
 }
 .connection-107AGH {										/* connections			connection							*/
 	background-color: rgba(var(--transparencycolor), .3);
@@ -2896,6 +2946,9 @@ img[src="/assets/cef02719c12d8aaf38894c16dca7fbe6.svg"] {	/* rolesettings			addr
 .item_f48d11:hover {
 	background: rgb(var(--transparencycolor), .4);
 }
+.passthrough__7cd54.selected__47401 {						/* rolesettings			permissions passthrough selected	*/
+	background: rgb(var(--accentcolor));
+}
 .icon__4c736 {												/* rolesettings			everyone role icon					*/
 	background-color: rgba(var(--transparencycolor), .4);
 }
@@ -2934,6 +2987,9 @@ img[src="/assets/cef02719c12d8aaf38894c16dca7fbe6.svg"] {	/* rolesettings			addr
 }
 .roleRow-3LoHQ6:hover:not(.roleRowDisableHover-2TXfy-) .circleButton-33AIyY {
 	background-color: rgba(var(--transparencycolor), .2);
+}
+.roleRow-3LoHQ6:hover:not(.roleRowDisableHover-2TXfy-) .circleButton-33AIyY:hover {
+	background-color: rgb(var(--accentcolor));
 }
 .roleRow-3LoHQ6:before,
 .roleRow-3LoHQ6:last-child:after {
@@ -3935,6 +3991,7 @@ img[src="/assets/cef02719c12d8aaf38894c16dca7fbe6.svg"] {	/* rolesettings			addr
 	color: var(--header-secondary);
 }
 .tag__69d9d {												/* modal				added user						*/
+	background-color: rgb(var(--accentcolor));
 	color: #fff;
 	text-shadow: 1px 1px var(--textshadow);
 }
@@ -4123,6 +4180,7 @@ img[src="/assets/cef02719c12d8aaf38894c16dca7fbe6.svg"] {	/* rolesettings			addr
 	right: 0;
 	bottom: 0;
 	left: 0;
+	background-color: rgb(var(--accentcolor));
 	-webkit-mask: url(https://discord.com/assets/94ff6fdc535b6ecb7b1bc54f2dd56a10.svg);
 }
 .guildIcon-3raYf3 {											/* current boost stats	guild icon							*/
